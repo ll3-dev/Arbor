@@ -18,5 +18,10 @@
   "packageManager": "pnpm@10.4.1",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "@trpc/server": "^11.4.3",
+    "hono": "^4.8.9",
+    "zod": "^3.24.2"
   }
 }

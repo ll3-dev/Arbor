@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "devDependencies": {
+    "wrangler": "^4.4.0"
+  },
+  "exports": {
+    "./index.ts": "./src/index.ts"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.2"
+  }
+}
