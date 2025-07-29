@@ -1,32 +1,38 @@
 {
   "name": "web",
-  "version": "0.0.1",
-  "type": "module",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
-    "typecheck": "tsc --noEmit"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "pnpm run build && vite preview",
+    "deploy": "pnpm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.52.1",
+    "@tailwindcss/vite": "^4.1.11",
     "@workspace/ui": "workspace:*",
+    "hono": "^4.8.9",
     "lucide-react": "^0.475.0",
-    "next": "^15.2.3",
-    "next-themes": "^0.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "server": "workspace:*",
+    "vite-tsconfig-paths": "^5.1.4",
     "zustand": "^5.0.6"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@cloudflare/vite-plugin": "^1.10.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react-swc": "^3.10.2",
     "@workspace/eslint-config": "workspace:^",
     "@workspace/typescript-config": "workspace:*",
-    "typescript": "^5.7.3"
+    "globals": "^16.3.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4",
+    "wrangler": "^4.26.0"
   }
 }
