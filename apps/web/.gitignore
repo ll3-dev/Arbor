@@ -26,3 +26,9 @@ dist-ssr
 # wrangler files
 .wrangler
 .dev.vars*
+
+# router
+.tanstack/
+
+# supabase
+database.types.ts
